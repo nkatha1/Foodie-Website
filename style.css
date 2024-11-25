@@ -1,0 +1,251 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+  }
+  
+  footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #ff7f50;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar h1 {
+    font-size: 24px;
+  }
+  
+  .navbar a {
+    color: white;
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .navbar a:hover {
+    color: #2c3e50;
+    text-decoration: underline;
+  }
+  
+  /* Hero Section (Home Page) */
+  .hero {
+    text-align: center;
+    padding: 50px;
+    color: white;
+    background: url('images/yummy burger.webp') no-repeat center center/cover;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+  }
+  
+  .hero .btn {
+    background-color: #ff7f50;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .hero .btn:hover {
+    background-color: #e76f3e;
+  }
+  
+  /* Menu Page */
+  .menu {
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .menu-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .menu-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .menu-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .menu-item img:hover {
+    transform: scale(1.05);
+  }
+  
+  .menu-item h3 {
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .menu-item p {
+    font-size: 1.2rem;
+    color: #777;
+  }
+  
+  .add-to-cart {
+    background-color: #ff7f50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add-to-cart:hover {
+    background-color: #e76f3e;
+  }
+  
+  /* Cart Page */
+  .cart {
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .cart h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  #cart-items {
+    margin-bottom: 30px;
+  }
+  
+  #cart-items .cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #cart-items img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  #cart-total {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+  
+  #checkout-btn {
+    background-color: #ff7f50;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #checkout-btn:hover {
+    background-color: #e76f3e;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .menu-items {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .menu-item h3 {
+      font-size: 1.5rem;
+    }
+  
+    .menu-item p {
+      font-size: 1rem;
+    }
+  
+    .hero h2 {
+      font-size: 2rem;
+    }
+  
+    .hero .btn {
+      padding: 10px 20px;
+      font-size: 1rem;
+    }
+  
+    #checkout-btn {
+      width: 100%;
+    }
+  }
+  
